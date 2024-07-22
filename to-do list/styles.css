@@ -1,0 +1,98 @@
+:root {
+    --fundo-bloco: #ffe9de;
+    --fundo-botoes-e-tarefas: #ffd1ba;
+    --fundo-botao-adicionar: #840031;
+    --cores-fonte: #202020;
+    --tarefa-concluida: #fd864b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url("./img/background.png");
+}
+
+.blocoLista {
+    background-color: var(--fundo-bloco);
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-inline: auto;
+    margin-top: 6.25rem;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ;
+}
+
+.input-tarefa {
+    border: none;
+    border-radius: 5px;
+    width: 18.75rem;
+    height: 2.5rem;
+    padding-left: .625rem;
+    background: var(--fundo-botoes-e-tarefas);
+    font-size: 1.0625rem;
+}
+
+.input-tarefa::placeholder {
+    font-size: 1.0625rem;
+}
+
+.botao-tarefa {
+    border: none;
+    border-radius: 5px;
+    height: 2.5rem;
+    background-color: var(--fundo-botao-adicionar);
+    color: var(--fundo-botoes-e-tarefas);
+    padding: 0 15px;
+    font-size: 17px;
+    float: right;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 700;
+}
+
+.botao-tarefa:hover {
+    opacity: 0.8;
+}
+
+.botao-tarefa:active {
+    opacity: 0.5;
+}
+
+.lista-tarefas {
+    width: 100%;
+    list-style: none;
+    margin-top: 1.875rem;
+}
+
+.tarefa {
+    background-color: var(--fundo-botoes-e-tarefas);
+    border-radius: 5px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 3.125rem;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 .9375rem;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+
+.tarefa:hover img {
+    opacity: 1;
+}
+
+.done {
+    background: var(--tarefa-concluida);
+    text-decoration: line-through;
+}
